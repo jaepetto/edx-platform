@@ -26,6 +26,11 @@ if [ -e $HOME/edx-venv_clean.tar.gz ]; then
     tar -C $HOME -xf $HOME/edx-venv_clean.tar.gz
 fi
 
+if [ -e $HOME/edx-npm-cache_clean.tar.gz ]; then
+    rm -rf $HOME/.npm
+    tar -C $HOME -xf $HOME/edx-npm-cache_clean.tar.gz
+fi
+
 # Activate the Python virtualenv
 source $HOME/edx-venv/bin/activate
 
